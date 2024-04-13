@@ -17,6 +17,9 @@ This is a command-line interface (CLI) application for managing employees, roles
 - **View total utilized budget of a department:** Presents the total utilized budget of a selected department by summing up the salaries of all employees in that department.
 - **Exit:** Allows users to exit the application.
 
+### Video
+
+[View the video](https://drive.google.com/file/d/1he2RSW8BtOCWmKRLhKA8vaOwqvh2b6k2/view)
 
 ## Installation
 
@@ -30,7 +33,3 @@ This is a command-line interface (CLI) application for managing employees, roles
    node server
 ### License
 This project is licensed under the [PonchoBT.Dev](LICENSE).
-
-### Screenshots
-
-

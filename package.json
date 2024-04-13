@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/PonchoBT/SQL-Employee-Tracker/issues"
   },
-  "homepage": "https://github.com/PonchoBT/SQL-Employee-Tracker#readme"
+  "homepage": "https://github.com/PonchoBT/SQL-Employee-Tracker#readme",
+  "dependencies": {
+    "mysql2": "^3.9.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7"
+  }
 }

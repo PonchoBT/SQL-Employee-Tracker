@@ -334,36 +334,29 @@ function updateEmployeeManager(connection) {
   });
 }
 
+
 // Function to view employees by manager
 function viewEmployeesByManager(connection) {
-  connection.query(
-    "SELECT * FROM employee WHERE manager_id IS NOT NULL",
-    (err, managers) => {
-      if (err) throw err;
-      inquirer
-        .prompt({
-          name: "manager_id",
-          type: "list",
-          message: "Select the manager to view employees:",
-          choices: managers.map((manager) => ({
-            name: `${manager.first_name} ${manager.last_name}`,
-            value: manager.id,
-          })),
-        })
-        .then((answer) => {
-          connection.query(
-            "SELECT * FROM employee WHERE manager_id = ?",
-            [answer.manager_id],
-            (err, employees) => {
-              if (err) throw err;
-              console.table(employees);
-              startApp(connection); 
-            }
-          );
-        });
-    }
-  );
+  connection.query('SELECT * FROM employee WHERE manager_id IS NOT NULL', (err, managers) => {
+    if (err) throw err;
+    inquirer.prompt({
+      name: 'manager_id',
+      type: 'list',
+      message: 'Select the manager to view employees:',
+      choices: managers.map((manager) => ({
+        name: `${manager.first_name} ${manager.last_name}`,
+        value: manager.id
+      }))
+    }).then((answer) => {
+      connection.query('SELECT * FROM employee WHERE manager_id = ?', [answer.manager_id], (err, employees) => {
+        if (err) throw err;
+        console.table(employees);
+        startApp(connection);
+      });
+    });
+  });
 }
+
 
 // Function to view employees by department
 function viewEmployeesByDepartment(connection) {

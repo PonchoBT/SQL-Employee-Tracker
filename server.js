@@ -18,6 +18,29 @@ connection.connect((err) => {
   startApp(connection);
 });
 
+// Function to display a stylized title ASCII
+function displayEmployeeTracker() {
+  const employeeTracker = `
+\x1b[32m  _______  __   __  _______  ___      _______  __   __  _______  _______   
+\x1b[32m |       ||  |_|  ||       ||   |    |       ||  | |  ||       ||       |  
+\x1b[32m |    ___||       ||    _  ||   |    |   _   ||  |_|  ||    ___||    ___|  
+\x1b[32m |   |___ |       ||   |_| ||   |    |  | |  ||       ||   |___ |   |___   
+\x1b[32m |    ___||       ||    ___||   |___ |  |_|  ||_     _||    ___||    ___|  
+\x1b[32m |   |___ | ||_|| ||   |    |       ||       |  |   |  |   |___ |   |___   
+\x1b[32m |_______||_|   |_||___|    |_______||_______|  |___|  |_______||_______|  
+\x1b[31m  _______  ______    _______  _______  ___   _  _______  ______            
+\x1b[31m |       ||    _ |  |   _   ||       ||   | | ||       ||    _ |           
+\x1b[31m |_     _||   | ||  |  |_|  ||       ||   |_| ||    ___||   | ||           
+\x1b[31m   |   |  |   |_||_ |       ||       ||      _||   |___ |   |_||_          
+\x1b[31m   |   |  |    __  ||       ||      _||     |_ |    ___||    __  |         
+\x1b[31m   |   |  |   |  | ||   _   ||     |_ |    _  ||   |___ |   |  | |         
+\x1b[31m   |___|  |___|  |_||__| |__||_______||___| |_||_______||___|  |_|                                     
+  `;
+  console.log(employeeTracker);
+}
+displayEmployeeTracker();
+
+
 // Function to start the application
 function startApp(connection) {
   // Prompt user for action

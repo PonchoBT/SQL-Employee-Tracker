@@ -16,3 +16,8 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
 ('Angel', 'Moran', 2, 1),
 ('Diego', 'Balderas', 3, 2),
 ('Dario', 'Hernandez', 3, 4);
+
+SELECT DATABASE();
+SELECT * FROM department;
+SELECT * FROM employee;
+SELECT * FROM role;

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/PonchoBT/SQL-Employee-Tracker#readme",
   "dependencies": {
+    "inquirer": "^8.2.4",
     "mysql2": "^3.9.4"
   },
   "devDependencies": {
